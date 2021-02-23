@@ -1,0 +1,5 @@
+DATABASE_HOST     = '127.0.0.1'
+DATABASE_NAME     = 'qencode'
+DATABASE_USER     = 'admin'
+DATABASE_PASSWORD = 'admin'
+DATABASE_CHARSET  = 'utf8'
