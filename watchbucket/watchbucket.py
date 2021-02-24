@@ -134,7 +134,7 @@ class WatchBucket(object):
       task.drm(key=conf.DRM_KEY, iv=conf.DRM_IV, key_url=conf.DRM_KEY_URL,
                la_url=conf.DRM_KEY_URL, key_id=conf.DRM_KEY_ID, pssh=conf.DRM_PSSH)
     if conf.USE_AES128:
-      task.aes128_encription(key=conf.DRM_KEY, iv=conf.DRM_IV, key_url=conf.DRM_KEY_URL)
+      task.aes128_encryption(key=conf.DRM_KEY, iv=conf.DRM_IV, key_url=conf.DRM_KEY_URL)
       
     query = query.replace('\n', '').replace(' ', '').strip()
     task.custom_start(query, payload=payload)

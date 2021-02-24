@@ -3,5 +3,5 @@ from sys import *
 from aws import *
 from qencode import *
 from query import *
-from encription import *
+from encryption import *
 from ftp import *

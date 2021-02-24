@@ -3,8 +3,11 @@
     "format": [
       {
         "output": "mp4",
-        "file_extension": "mp4",
-        "tag": "{user_tag}",
+        "destination": {
+          "url": "ftp://.../{file_name}.mp4",
+          "secret": "",
+          "key": "qencode"
+        },
         "quality": 23,
         "video_codec": "libx264",
         "height": "2160"
