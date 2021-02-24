@@ -46,7 +46,7 @@ git clone https://github.com/qencode-dev/watchfolder.git /home/encoder/watchbuck
     
  8. (FTP mode only) Create watchbucket "input", "processing", "processed" and "errors" folders in the root of your FTP server.
  
- You can optionally change these folders names in watchbucket/settings/sys.py
+ You can optionally change these folder names in watchbucket/settings/sys.py
  
  By default there's the following flow:
  
@@ -57,10 +57,10 @@ git clone https://github.com/qencode-dev/watchfolder.git /home/encoder/watchbuck
     
   2) After the transcoding job is launched, source video is moved to "processing" folder.  
   
-  3) After transcoding job is successfully completed source video is moved to "processed" folder.
+  3) After the transcoding job is successfully completed source video is moved to "processed" folder.
   In case you want source to be deleted after successful processing, you should set 
   
-      DELETE_PROCESSED_FIin LE = True
+      DELETE_PROCESSED_FILE = True
 
   in watchbucket/settings/sys.py
   
