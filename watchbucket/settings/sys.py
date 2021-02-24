@@ -10,7 +10,7 @@ INPUT_PATH = 'input' #important
 PROCESSED_PATH = 'processed' #required
 ERRORS_PATH = 'errors'
 
-QUERY_DIR = os.path.abspath(os.path.join(os.getcwd(), '../watchbucket/query'))
+QUERY_DIR = os.path.abspath(os.path.join(os.getcwd(), './watchbucket/query'))
 DELETE_PROCESSED_FILE = False
 USE_DRM = False
 USE_AES128 = False
