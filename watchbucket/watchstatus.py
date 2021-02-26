@@ -45,7 +45,7 @@ class WatchStatus(object):
       for item in data:
         self._log.debug('getting job status: ' + item.get('token'))
         status = self.get_status(item.get('token'))
-        if not status:
+        if not status or not 'status' in status:
           continue
         error_description = None
         if 'error_description' in status:
