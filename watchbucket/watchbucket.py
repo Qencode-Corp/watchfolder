@@ -302,6 +302,8 @@ class WatchBucket(object):
     ftp.cwd(conf.FTP_INPUT_FOLDER)
     files = ftp.nlst()
     for i, file in enumerate(files):
+      if file == '.' or file == '..':
+        continue
       try:
         is_exist = db.task.exists("filename = '{0}'".format(file))
         if is_exist:
