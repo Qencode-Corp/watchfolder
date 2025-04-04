@@ -11,4 +11,4 @@ QUEUE_SIZE = 5
 
 URL_LIFETIME = 2592000 #seconds
 
-QUERY_DIR = os.path.abspath('/home/encoder/watchbucket/watchbucket/query')
+QUERY_DIR = os.path.abspath('/home/encoder/watchfolder_python3/watchbucket/query')
