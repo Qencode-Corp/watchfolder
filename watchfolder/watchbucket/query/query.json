@@ -1,0 +1,17 @@
+{"query": {
+    "source": "{source_url}",
+    "format": [
+      {
+        "output": "mp4",
+        "destination": {
+          "url": "ftp://.../{file_name}.mp4",
+          "secret": "...",
+          "key": "..."
+        },
+        "quality": 23,
+        "video_codec": "libx264",
+        "height": "2160"
+      }
+    ]
+  }
+}
