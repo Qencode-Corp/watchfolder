@@ -253,7 +253,8 @@ class WatchBucket:
           self._log.debug(
             '_worker.start_encode.res: token: %s, error: %s', task.task_token, task.error
           )
-          self._mark_done(payload, task.task_token)
+          if task.task_token is not None:
+            self._mark_done(payload, task.task_token)
 
 def main():
   WatchBucket()
