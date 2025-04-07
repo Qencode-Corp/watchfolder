@@ -21,7 +21,7 @@ class Daemon:
     def getpid(self):
     # Get the pid from the pidfile
         try:
-            pf = open(self.pidfile, 'rb')
+            pf = open(self.pidfile, 'r')
             pid = int(pf.read().strip())
             pf.close()
         except IOError:
@@ -61,14 +61,14 @@ class Daemon:
         # redirect standard file descriptors
         sys.stdout.flush()
         sys.stderr.flush()
-        si = open(self.stdin, 'rb')
-        so = open(self.stdout, 'a+b', 0)
+        si = open(self.stdin, 'r')
+        so = open(self.stdout, 'a+', 1)
         os.dup2(si.fileno(), sys.stdin.fileno())
         os.dup2(so.fileno(), sys.stdout.fileno())
         if self.single_out_error:
             se = so
         else:
-            se = open(self.stderr, 'a+b', 0)
+            se = open(self.stderr, 'a+', 1)
         os.dup2(se.fileno(), sys.stderr.fileno())
         sys.stdout = so
         sys.stderr = se
